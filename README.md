@@ -29,6 +29,7 @@ console.log(resp1)
 
 const resp1 = await provider.node.test2("i", "do", "too");
 console.log(resp2)
+>>
 {
   method: 'node_rest_test2',
   params: [ 'i', 'do', 'too' ],
