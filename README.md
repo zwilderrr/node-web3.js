@@ -1,6 +1,4 @@
-# proof of concept
-
-## getting started
+# Getting started
 
 ### Install node-web3
 
