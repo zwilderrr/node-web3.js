@@ -53,20 +53,3 @@ async function callNodeRestMethod({ method, params }) {
 	const res = await fetch("https://www.example.com");
 	return Promise.resolve({ method, params, res });
 }
-
-// tests
-const config = {
-	endpoint: "https://868605ce-acde-424e-800c-55ab87808268.ethereum.bison.run",
-	username: "XLHELWRFNKIW6OTDWEXU",
-	password: "ED7KOCLQ3XMWA3N6FFXJETO2DIFBUKWILVGOZLDU",
-};
-
-const provider = createNodeWeb3Provider(config);
-
-const resp1 = await provider.node.test1("method making rpc call");
-const resp2 = await provider.node.test2("method making rest call");
-console.log(resp1);
-console.log(resp2);
-
-const latestBlock = await provider.eth.getBlockNumber();
-console.log("Latest Ethereum Block is ", latestBlock);

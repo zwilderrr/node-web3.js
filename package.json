@@ -1,11 +1,10 @@
 {
 	"name": "@zwilderrr/node-web3",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Proof of concept",
 	"main": "src/index.js",
 	"type": "module",
 	"scripts": {
-		"build": "tsc",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
