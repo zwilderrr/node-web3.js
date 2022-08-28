@@ -2,13 +2,13 @@
 
 ## getting started
 
-### install package
+### Install node-web3
 
 ```
 npm i @zwilderrr/node-web3
 ```
 
-### create provider
+### Create provider
 
 ```
 const config = {
@@ -20,7 +20,7 @@ const config = {
 const provider = createNodeWeb3Provider(config);
 ```
 
-### custom calls
+### AdvancedAPI calls
 
 ```
 const rpcResponse = await provider.node.test1("RPC", "call");
@@ -47,7 +47,7 @@ console.log(restResponse);
 }
 ```
 
-### standard web3 calls
+### Standard web3 calls
 
 ```
 const latestBlock = await provider.eth.getBlockNumber();
