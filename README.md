@@ -23,16 +23,15 @@ const provider = createNodeWeb3Provider(config);
 ### custom calls
 
 ```
-const resp1 = await provider.node.test1("i", "love", "node");
-console.log(resp1)
->> { method: 'node_test1', params: [ 'i', 'love', 'node' ] }
+const rpcResponse = await provider.node.test1("RPC", "call");
+console.log(rpcResponse);
+{ method: 'node_rpc_test1', params: [ 'RPC', 'call' ] }
 
-const resp1 = await provider.node.test2("i", "do", "too");
-console.log(resp2)
->>
+const restResponse = await provider.node.test2("REST", "call");
+console.log(restResponse);
 {
   method: 'node_rest_test2',
-  params: [ 'i', 'do', 'too' ],
+  params: [ 'REST', 'call' ],
   res: Response {
     size: 0,
     timeout: 0,
