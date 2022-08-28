@@ -1,0 +1,28 @@
+{
+	"name": "@zwilderrr/node-web3",
+	"version": "1.0.0",
+	"description": "Proof of concept",
+	"main": "src/index.js",
+	"type": "module",
+	"scripts": {
+		"build": "tsc",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/zwilderrr/node-web3.js.git"
+	},
+	"keywords": [
+		"web3"
+	],
+	"author": "zack wilder",
+	"license": "GPL-3.0-or-later",
+	"bugs": {
+		"url": "https://github.com/zwilderrr/node-web3.js/issues"
+	},
+	"homepage": "https://github.com/zwilderrr/node-web3.js#readme",
+	"dependencies": {
+		"web3": "^1.7.5"
+	},
+	"devDependencies": {}
+}
