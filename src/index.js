@@ -1,15 +1,15 @@
 import Web3 from "web3";
 
+// Advanced API functions
 const advancedAPI = {
-	// Advanced API functions
-	test1: function (...params) {
+	rpcMethod: function (...params) {
 		return callNodeRPCMethod({
 			method: "node_rpc_test1",
 			params,
 		});
 	},
 
-	test2: async function (...params) {
+	restMethod: async function (...params) {
 		return callNodeRestMethod({
 			method: "node_rest_test2",
 			params,

@@ -21,14 +21,14 @@ const provider = createNodeWeb3Provider(config);
 ### AdvancedAPI calls
 
 ```
-const rpcResponse = await provider.node.test1("RPC", "call");
+const rpcResponse = await provider.node.rpcMethod("RPC", "call");
 console.log(rpcResponse);
-{ method: 'node_rpc_test1', params: [ 'RPC', 'call' ] }
+{ method: 'node_rpc_method', params: [ 'RPC', 'call' ] }
 
-const restResponse = await provider.node.test2("REST", "call");
+const restResponse = await provider.node.restMethod("REST", "call");
 console.log(restResponse);
 {
-  method: 'node_rest_test2',
+  method: 'node_rest_method',
   params: [ 'REST', 'call' ],
   res: Response {
     size: 0,
