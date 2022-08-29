@@ -6,7 +6,7 @@
 npm i @zwilderrr/node-web3
 ```
 
-### Create provider
+### Create `web3` provider
 
 ```
 const config = {
@@ -15,17 +15,25 @@ const config = {
 	password: <PASSWORD>,
 };
 
-const provider = createNodeWeb3Provider(config);
+const web3 = createNodeWeb3Provider(config);
+```
+
+### Standard web3 calls
+
+```
+const latestBlock = await web3.eth.getBlockNumber();
+console.log("Latest Ethereum Block is ", latestBlock);
+>> Latest Ethereum Block is  15430232
 ```
 
 ### AdvancedAPI calls
 
 ```
-const rpcResponse = await provider.node.rpcMethod("RPC", "call");
+const rpcResponse = await web3.node.rpcMethod("RPC", "call");
 console.log(rpcResponse);
 { method: 'node_rpc_method', params: [ 'RPC', 'call' ] }
 
-const restResponse = await provider.node.restMethod("REST", "call");
+const restResponse = await web3.node.restMethod("REST", "call");
 console.log(restResponse);
 {
   method: 'node_rest_method',
@@ -43,12 +51,4 @@ console.log(restResponse);
     }
   }
 }
-```
-
-### Standard web3 calls
-
-```
-const latestBlock = await provider.eth.getBlockNumber();
-console.log("Latest Ethereum Block is ", latestBlock);
->> Latest Ethereum Block is  15430232
 ```
