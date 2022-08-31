@@ -52,3 +52,13 @@ console.log(restResponse);
   }
 }
 ```
+
+### Switching from web3.js
+
+```
+const Web3 = require('web3');
+const web3 = new Web3('ws://localhost:8546');
+
+// swap the above code for the following
+const web3 = createNodeWeb3Provider(config);
+```
