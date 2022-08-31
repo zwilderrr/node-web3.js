@@ -8,7 +8,7 @@ npm i @zwilderrr/node-web3
 
 ### Create `web3` provider
 
-```
+```js
 const config = {
 	endpoint: "https://868605ce-acde-424e-800c-55ab87808268.ethereum.bison.run",
 	username: <USERNAME>,
@@ -20,7 +20,7 @@ const web3 = createNodeWeb3Provider(config);
 
 ### Standard web3 calls
 
-```
+```js
 const latestBlock = await web3.eth.getBlockNumber();
 console.log("Latest Ethereum Block is ", latestBlock);
 >> Latest Ethereum Block is  15430232
@@ -28,7 +28,7 @@ console.log("Latest Ethereum Block is ", latestBlock);
 
 ### AdvancedAPI calls
 
-```
+```js
 const rpcResponse = await web3.node.rpcMethod("RPC", "call");
 console.log(rpcResponse);
 { method: 'node_rpc_method', params: [ 'RPC', 'call' ] }
@@ -55,9 +55,9 @@ console.log(restResponse);
 
 ### Switching from web3.js
 
-```
-const Web3 = require('web3');
-const web3 = new Web3('ws://localhost:8546');
+```js
+const Web3 = require("web3");
+const web3 = new Web3("ws://localhost:8546");
 
 // swap the above code for the following
 const web3 = createNodeWeb3Provider(config);
